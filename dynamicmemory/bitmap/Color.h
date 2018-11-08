@@ -10,7 +10,11 @@ class Color {
 private:
     uint32_t rgba;
 public:
-    Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a) {
+    Color(uint8_t r, uint8_t g, uint8_t b){
+        rgba = (r<<24) + (g<<16) + (b<<8) + 255;
+    }
+    
+    Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a){
         rgba = (r<<24) + (g<<16) + (b<<8) + a;
     }
     //TODO:	Color(uint8_t r, uint8_t g, uint8_t b, uint8_t alpha) {}
