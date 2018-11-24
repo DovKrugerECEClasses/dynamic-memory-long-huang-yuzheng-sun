@@ -279,7 +279,7 @@ int main() {
     d.add(&c);
     double r = 10, height  = 20;
     Cylinder cyl(r, height);
-    d.add(&c);
+    d.add(&cyl);
     d.write("test.stl");
     Sphere sph(100,20,10);
     d.add(&sph);
